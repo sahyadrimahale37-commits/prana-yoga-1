@@ -289,10 +289,6 @@ function FAQSection() {
       answer: "Just a yoga mat and comfortable clothing. No other equipment is required. We teach asanas that can be done at home without any special props.",
     },
     {
-      question: "Is there a refund policy?",
-      answer: "We offer a 7-day free trial so you can experience our classes before committing. After enrollment, we provide a 7-day money-back guarantee if you are not satisfied.",
-    },
-    {
       question: "How do I join the live sessions?",
       answer: "After registration, you will receive a WhatsApp group invite and Zoom links for all sessions. Simply click the link at session time to join.",
     },
