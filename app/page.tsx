@@ -35,7 +35,7 @@ function StickyHeader() {
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
             <img 
-              src="https://prana-yoga-website-premium-7gpq.vercel.app/IMG-20260414-WA0000.jpg" 
+              src="/assets/logo.jpg" 
               alt="Prana Yoga Logo" 
               className="w-full h-full object-contain mix-blend-multiply"
             />
@@ -348,10 +348,14 @@ function RegistrationSection() {
             </div>
 
             <form 
-              action="/api/submit"
+              action="https://formsubmit.co/pranapoweryogaa@gmail.com"
               method="POST"
               className="space-y-4"
             >
+              {/* FormSubmit Configuration */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="http://localhost:3000/thank-you.html" />
+              <input type="hidden" name="_subject" value="New Prana Yoga Registration" />
 
               <div>
                 <Input
@@ -414,7 +418,7 @@ function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center overflow-hidden">
                 <img 
-                  src="https://prana-yoga-website-premium-7gpq.vercel.app/IMG-20260414-WA0000.jpg" 
+                  src="/assets/logo.jpg" 
                   alt="Prana Yoga Logo" 
                   className="w-full h-full object-contain mix-blend-multiply"
                 />
