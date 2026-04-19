@@ -343,28 +343,38 @@ function RegistrationSection() {
               <p className="text-sm text-muted-foreground">Start your 7-day free trial today</p>
             </div>
 
-            <form className="space-y-4">
+            <form 
+              action="/api/submit"
+              method="POST"
+              className="space-y-4"
+            >
+
               <div>
                 <Input
+                  name="name"
                   placeholder="Your Name"
+                  required
                   className="bg-background border-border focus:border-primary"
                 />
               </div>
               <div>
                 <Input
-                  placeholder="Phone Number"
+                  name="phone"
                   type="tel"
+                  placeholder="Phone Number"
+                  required
                   className="bg-background border-border focus:border-primary"
                 />
               </div>
               <div>
                 <Input
-                  placeholder="Email"
+                  name="email"
                   type="email"
+                  placeholder="Email"
                   className="bg-background border-border focus:border-primary"
                 />
               </div>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6">
                 Submit
               </Button>
             </form>

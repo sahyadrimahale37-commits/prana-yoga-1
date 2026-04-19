@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Complete</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fafaf9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 48px 32px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      animation: slide 0.6s ease-out;
+    }
+    @keyframes slide { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .card { animation: float 3s ease-in-out infinite; }
+    .logo { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 24px; font-weight: 600; color: #1f2937; }
+    .logo-icon { width: 24px; height: 24px; background: #7c3aed; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; }
+    .icon { width: 72px; height: 72px; background: #7c3aed; border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: white; animation: scale 0.6s ease-out; }
+    @keyframes scale { 0% { transform: scale(0); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    h1 { font-size: 32px; font-weight: 600; color: #1f2937; margin-bottom: 16px; }
+    p { font-size: 16px; color: #6b7280; margin-bottom: 12px; }
+    .highlight { color: #7c3aed; font-weight: 600; }
+    .dot { display: inline-block; width: 6px; height: 6px; background: #7c3aed; border-radius: 50%; margin: 0 2px; animation: blink 1.5s ease-in-out infinite; }
+    @keyframes blink { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo"><div class="logo-icon">🍃</div>Prana Yoga</div>
+    <div class="icon">✓</div>
+    <h1>Registration Complete</h1>
+    <p>Thank you for choosing <span class="highlight">Prana Yoga</span></p>
+    <p>Redirecting you to WhatsApp<span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+  </div>
+  <script>setTimeout(function() { window.location.href = "https://wa.me/919028329148?text=Hi%20I%20have%20completed%20my%20registration%20for%20Prana%20Yoga"; }, 3000);</script>
+</body>
+</html>
+</html></content>
+<parameter name="filePath">/workspaces/v0-yoga-website-review/public/thank-you.html
