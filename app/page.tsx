@@ -31,7 +31,7 @@ function StickyHeader() {
         isScrolled ? "bg-card/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
-      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
             <img 
@@ -46,9 +46,11 @@ function StickyHeader() {
           <a href="#programs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Programs</a>
           <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
         </nav>
+         <a href="#register">
         <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
           Join Now
         </Button>
+        </a>
       </div>
     </header>
   )
@@ -61,10 +63,6 @@ function HeroSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <Badge className="mb-4 bg-accent/20 text-accent-foreground border-accent/30 hover:bg-accent/30">
-              <Sparkles className="w-3 h-3 mr-1" />
-              7 Days Free Trial
-            </Badge>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
               Transform Your Life With Yoga
             </h1>
@@ -72,12 +70,13 @@ function HeroSection() {
               Join premium online yoga sessions for strength, flexibility & natural glow. Experience the ancient art of wellness with modern convenience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#register">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
                 Register Free
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
+              </a>
             </div>
-            
             {/* Trust Badge */}
             <div className="flex items-center gap-6 mt-10 pt-8 border-t border-border">
               <div className="flex items-center gap-2">
@@ -261,11 +260,12 @@ function PricingSection() {
                 </li>
               ))}
             </ul>
-
+            <a href="#register">
             <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg">
               Join Now
               <ChevronRight className="w-5 h-5 ml-1" />
             </Button>
+            </a>
           </CardContent>
         </Card>
       </div>
@@ -287,10 +287,6 @@ function FAQSection() {
     {
       question: "What equipment do I need?",
       answer: "Just a yoga mat and comfortable clothing. No other equipment is required. We teach asanas that can be done at home without any special props.",
-    },
-    {
-      question: "Can I watch recorded sessions if I miss a live class?",
-      answer: "Yes! All live sessions are recorded and available for 7 days. Premium members get lifetime access to all recordings.",
     },
     {
       question: "Is there a refund policy?",
@@ -338,17 +334,17 @@ function FAQSection() {
 // Registration Form Section
 function RegistrationSection() {
   return (
-    <section className="py-16 px-4 bg-secondary/50">
+    <section id="register" className="py-16 px-4 bg-secondary/50">
       <div className="max-w-md mx-auto">
         <Card className="bg-card border-border/50 shadow-lg">
           <CardContent className="p-8">
             <div className="text-center mb-6">
               <h2 className="font-serif text-2xl font-bold text-foreground mb-2">Register Now</h2>
-              <p className="text-sm text-muted-foreground">Start your 7-day free trial today</p>
+              
             </div>
 
             <form 
-              action="https://formsubmit.co/pranapoweryogaa@gmail.com"
+              action="https://formsubmit.co/sahyadrimahale37@gmail.com"
               method="POST"
               className="space-y-4"
             >
@@ -397,7 +393,7 @@ function RegistrationSection() {
 function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20know%20more%20about%20Prana%20Yoga"
+      href="https://wa.me/919028329148?text=Hi,%20I%20want%20to%20know%20more%20about%20Prana%20Yoga"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full p-4 shadow-lg transition-transform hover:scale-110"
@@ -455,7 +451,7 @@ function Footer() {
             <ul className="space-y-2 text-sm text-background/70">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                +91 98765 43210
+                +91 90283 29148
               </li>
               <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4" />
