@@ -13,47 +13,6 @@ import {
 } from "@/components/ui/accordion"
 import { Check, Play, Star, Clock, Users, Award, MessageCircle, ChevronRight, Leaf, Sparkles, Heart, Phone } from "lucide-react"
 
-// Countdown Timer Component
-function CountdownTimer({ targetDate }: { targetDate: Date }) {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime()
-      const distance = targetDate.getTime() - now
-
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000),
-        })
-      }
-    }, 1000)
-
-    return () => clearInterval(timer)
-  }, [targetDate])
-
-  return (
-    <div className="flex gap-3 justify-center">
-      {Object.entries(timeLeft).map(([key, value]) => (
-        <div key={key} className="flex flex-col items-center">
-          <div className="bg-primary text-primary-foreground rounded-lg w-14 h-14 flex items-center justify-center text-xl font-bold">
-            {value.toString().padStart(2, "0")}
-          </div>
-          <span className="text-xs text-muted-foreground mt-1 capitalize">{key}</span>
-        </div>
-      ))}
-    </div>
-  )
-}
-
 // Sticky Header Component
 function StickyHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -342,11 +301,8 @@ function InstructorsSection() {
   )
 }
 
-// Pricing Section with Countdown
+// Pricing Section
 function PricingSection() {
-  const targetDate = new Date()
-  targetDate.setDate(targetDate.getDate() + 15) // 15 days from now
-
   const features = [
     "Strength Training",
     "Stretching",
@@ -362,11 +318,6 @@ function PricingSection() {
     <section className="py-16 px-4">
       <div className="max-w-xl mx-auto">
         <Card className="bg-card border-2 border-primary/20 shadow-xl overflow-hidden">
-          <div className="bg-primary/5 px-6 py-4 text-center border-b border-border">
-            <p className="text-sm text-muted-foreground mb-2">Next batch starts in</p>
-            <CountdownTimer targetDate={targetDate} />
-          </div>
-          
           <CardContent className="p-8">
             <div className="text-center mb-6">
               <div className="flex items-center justify-center gap-3 mb-2">
