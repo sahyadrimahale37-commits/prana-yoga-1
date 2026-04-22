@@ -346,7 +346,7 @@ function RegistrationSection() {
             >
               {/* FormSubmit Configuration */}
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="http://localhost:3000/thank-you.html" />
+             <input type="hidden" name="_next" value="https://v0-yoga-website-review.vercel.app/thank-you.html" />
               <input type="hidden" name="_subject" value="New Prana Yoga Registration" />
 
               <div>
